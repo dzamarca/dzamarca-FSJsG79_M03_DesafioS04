@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desafío - Inmobiliaria</title>
+    <title>DZ-Desafio Inmobiliaria</title>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/estilos.css" />
     <!-- Bootstrap CDN -->
@@ -31,14 +31,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#">En venta</a>
+              <a class="nav-link" href="./assets/pages/venta.html">En venta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Alquiler</a>
+              <a class="nav-link" href="./assets/pages/alquiler.html">Alquiler</a>
             </li>
           </ul>
         </div>
@@ -51,23 +48,22 @@
       <!-- Propiedades en venta -->
       <section id="venta">
         <h2>Propiedades en venta</h2>
-        <div class="row" id="indexPropiedadesVenta">
-          <!-- Aca van las 3 propiedades -->
-        </div>
-        <a href="./assets/pages/venta.html" class="btn btn-dark"
-          >Ver todas las propiedades en venta</a
-        >
+        <!-- 
+        **** Se agrega id para agregar las 3 propiedades del index 
+        -->
+        <div class="row" id="indexPropiedadesVenta"></div>
+
+        <a href="./assets/pages/venta.html" class="btn btn-dark">Ver todas las propiedades en venta</a>
       </section>
       <hr />
       <!-- Propiedades en alquiler -->
       <section id="alquiler" class="mb-5">
         <h2>Propiedades en alquiler</h2>
-        <div class="row" id="indexPropiedadesAlquiler">
-          <!-- Aca van las 3 propiedades -->
-        </div>
-        <a href="./assets/pages/alquiler.html" class="btn btn-dark"
-          >Ver todas las propiedades en alquiler</a
-        >
+        <!-- 
+        **** Se agrega id para agregar las 3 propiedades del index 
+        -->
+        <div class="row" id="indexPropiedadesAlquiler"></div>
+        <a href="./assets/pages/alquiler.html" class="btn btn-dark">Ver todas las propiedades en alquiler</a>
       </section>
     </div>
     <!-- Font awesome -->
@@ -81,8 +77,11 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+
+    <!-- 
+    **** Implementación de funciones y arreglos 
+    -->
     <script type="module">
-      // const contenedor = document.querySelector(".row");
       const contenedorVenta = document.querySelector("#indexPropiedadesVenta");
       const contenedorAlquiler = document.querySelector("#indexPropiedadesAlquiler");
       import {propiedades_venta,propiedades_alquiler} from "./assets/js/array.js";
@@ -90,7 +89,6 @@
 
       propiedades(propiedades_venta,contenedorVenta);
       propiedades(propiedades_alquiler,contenedorAlquiler);
-
     </script>
   </body>
 </html>
